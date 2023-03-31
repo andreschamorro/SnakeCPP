@@ -6,7 +6,7 @@
         ],
         "terminal.integrated.env.windows": {
             "CHERE_INVOKING": "1",
-            "MSYSTEM": "MINGW64",
+            "MSYSTEM": "MINGW32",
         },
 
     "terminal.integrated.automationShell.windows": null,
