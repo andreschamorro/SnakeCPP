@@ -37,8 +37,6 @@ public:
     }
 
     Direction direction;
-    int currentFoodX, currentFoodY;
     int boardSizeWidth, boardSizeHeight;
     int segmentSize;
-    bool ateFood;
 };

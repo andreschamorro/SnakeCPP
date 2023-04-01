@@ -23,23 +23,6 @@ class ofApp : public ofBaseApp{
 		// void windowResized(int w, int h);
 		// void dragEvent(ofDragInfo dragInfo);
 		// void gotMessage(ofMessage msg);
-		void foodSpawner();
-		void drawFood();
-		void drawStartScreen();
-		void drawLostScreen();
-		void drawBoardGrid();
-
-		Snake* snake;
-
-		bool playing = false;
-		bool crashed = false;
-		bool foodSpawned = false;
-
-		int currentFoodX;
-		int currentFoodY;
-
-		int boardSizeWidth, boardSizeHeight;
-		int cellSize; // Pixels
 
 		State* currentState;
 		GameState* gameState;

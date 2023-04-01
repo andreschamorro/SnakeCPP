@@ -19,9 +19,7 @@ class GameState : public State {
         void drawBoardGrid();
 
         Snake* snake;
-
-        bool playing = false;
-        bool crashed = false;
+        
         bool foodSpawned = false;
 
         int currentFoodX;

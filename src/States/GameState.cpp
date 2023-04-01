@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 GameState::GameState() {
-    crashed = false;
     foodSpawned = false;
     cellSize = 25;
     boardSizeWidth = 64;
@@ -17,7 +16,7 @@ GameState::~GameState() {
 void GameState::reset() {
     delete snake;
     snake = new Snake(cellSize, boardSizeWidth, boardSizeHeight);
-    crashed, foodSpawned, playing = false;
+    foodSpawned = false;
     setFinished(false);
     setNextState("");
 }
@@ -82,14 +81,12 @@ void GameState::foodSpawner() {
             }
         } while(isInSnakeBody);
         foodSpawned = true;
-        snake->currentFoodX = currentFoodX;
-        snake->currentFoodY = currentFoodY;
     }
 }
 //--------------------------------------------------------------
 void GameState::drawFood() {
     ofSetColor(ofColor::red);
-    if(foodSpawned && !snake->ateFood) {
+    if(foodSpawned) {
         ofDrawRectangle(currentFoodX*cellSize, currentFoodY*cellSize, cellSize, cellSize);
     }
 }
