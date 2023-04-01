@@ -53,16 +53,16 @@ void GameState::keyPressed(int key) {
 
     switch(key) {
         case OF_KEY_LEFT:
-            snake->changeDirection(Snake::LEFT);
+            snake->changeDirection(LEFT);
             break;
         case OF_KEY_RIGHT:
-            snake->changeDirection(Snake::RIGHT);
+            snake->changeDirection(RIGHT);
             break;
         case OF_KEY_UP:
-            snake->changeDirection(Snake::UP);
+            snake->changeDirection(UP);
             break;
         case OF_KEY_DOWN:
-            snake->changeDirection(Snake::DOWN);
+            snake->changeDirection(DOWN);
             break;
     }
 }

@@ -1,20 +1,24 @@
 #pragma once
 #include <vector>
 
-class Snake {
-
-private:
-    std::vector<std::vector<int>> body;
-    bool crashed;
-
-public:
-    enum Direction {
+enum Direction {
         LEFT,
         RIGHT,
         UP,
         DOWN,
         NONE
     };
+
+class Snake {
+
+private:
+    std::vector<std::vector<int>> body;
+    Direction direction;
+    int boardSizeWidth, boardSizeHeight;
+    int segmentSize;
+    bool crashed;
+
+public:
     Snake(int segmentSize, int boardSizeW, int boardSizeH);
     ~Snake();
 
@@ -35,8 +39,4 @@ public:
     std::vector<std::vector<int>> getBody() {
         return this->body;
     }
-
-    Direction direction;
-    int boardSizeWidth, boardSizeHeight;
-    int segmentSize;
 };
