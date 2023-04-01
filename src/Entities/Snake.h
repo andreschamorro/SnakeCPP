@@ -15,7 +15,7 @@ public:
         DOWN,
         NONE
     };
-    Snake();
+    Snake(int segmentSize, int boardSizeW, int boardSizeH);
     ~Snake();
 
     void update();
@@ -38,5 +38,7 @@ public:
 
     Direction direction;
     int currentFoodX, currentFoodY;
+    int boardSizeWidth, boardSizeHeight;
+    int segmentSize;
     bool ateFood;
 };

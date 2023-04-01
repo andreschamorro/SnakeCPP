@@ -1,8 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Snake.h"
-#include <vector>
+#include "State.h"
+#include "GameState.h"
+#include "MenuState.h"
 
 class ofApp : public ofBaseApp{
 
@@ -37,5 +38,11 @@ class ofApp : public ofBaseApp{
 		int currentFoodX;
 		int currentFoodY;
 
+		int boardSizeWidth, boardSizeHeight;
+		int cellSize; // Pixels
+
+		State* currentState;
+		GameState* gameState;
+		MenuState* menuState;
 		
 };
