@@ -35,7 +35,7 @@ void GameState::update() {
     }
 
     foodSpawner();
-    if(ofGetFrameNum() % 20 == 0) {
+    if(ofGetFrameNum() % 10 == 0) {
         snake->update();
     }
 
@@ -74,7 +74,7 @@ void GameState::foodSpawner() {
             isInSnakeBody = false;
             currentFoodX = ofRandom(1, boardSizeWidth-1);
             currentFoodY = ofRandom(1, boardSizeHeight-1);
-            for(int i = 0; i < snake->getBody().size(); i++) {
+            for(unsigned int i = 0; i < snake->getBody().size(); i++) {
                 if(currentFoodX == snake->getBody()[i][0] and currentFoodY == snake->getBody()[i][1]) {
                     isInSnakeBody = true;
                 }
